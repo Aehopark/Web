@@ -23,19 +23,17 @@ function App() {
       <FifthSection />
       <SixthSection />
       <SeventhSection />
-      <EighthSection>
-      </EighthSection>
+      <EighthSection></EighthSection>
       <Footer />
     </AppContainer>
   );
 }
 
 export default App;
-
 //아래와 같은 방식으로 폰트와 컬러 사용하시면 됩니다!
 const H1 = styled.h1`
-  ${({ theme }) => theme.fonts.sansita_one}
-  color: ${({ theme }) => theme.colors.pc1}
+  ${({ theme }) => theme.fonts.sansita_one};
+  color: ${({ theme }) => theme.colors.pc1};
 `;
 
 const AppContainer = styled.div`
