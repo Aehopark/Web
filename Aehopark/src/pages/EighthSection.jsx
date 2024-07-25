@@ -1,28 +1,29 @@
+import React from 'react';
 import styled from 'styled-components';
+import mascot4 from '../assets/mascot4.png';
 
 function EighthSection() {
   return (
     <SectionContainer>
       <LeftSection>
-        <PlaceholderText>[애호박 이미지]</PlaceholderText>
+        <StyledImage src={mascot4} alt="mascot4"/>
       </LeftSection>
       <RightSection>
-        <SmallText>대표 방유찬</SmallText>
-        <SmallText>이메일 : Kdoo9350@naver.com</SmallText>
-        <SmallText>연락처 : 010-9350-8862</SmallText>
-        <SmallText>주소 : 진주시 진주대로 501 508호</SmallText>
+        <SmallText>&nbsp;대표 방유찬</SmallText>
+        <SmallText>&nbsp;이메일&nbsp;:&nbsp;kdoo9350@naver.com</SmallText>
+        <SmallText>&nbsp;연락처&nbsp;:&nbsp;010-9350-8862</SmallText>
+        <SmallText>&nbsp;주소&nbsp;:진주시&nbsp;진주대로&nbsp;501&nbsp;508호</SmallText>
       </RightSection>
     </SectionContainer>
   );
-}
+};
 
 export default EighthSection;
 
 const SectionContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 50px 0;
 `;
 
 const LeftSection = styled.div`
@@ -30,25 +31,23 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
+  margin-top: -190px; 
+  margin-right: 100px; 
 `;
 
 const SmallText = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   margin-bottom: 10px;
+  text-align: right;
 `;
 
-const PlaceholderText = styled.div`
-  background-color: rgba(224, 224, 224, 0.9);
-  color: #333;
-  padding: 10px;
-  text-align: center;
-  font-style: italic;
-  font-weight: bold;
-  border: 1px dashed #666;
-  margin: 10px;
+const StyledImage = styled.img`
+  width: 280px;
+  height: 200px;
+  margin-left: 200px; 
+  margin-bottom: 300px;
 `;

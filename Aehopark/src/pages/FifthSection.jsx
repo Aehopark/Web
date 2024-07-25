@@ -1,18 +1,20 @@
+import React from 'react';
 import styled from 'styled-components';
+import mascot3 from '../assets/mascot3.png';
 
 function FifthSection() {
   return (
     <SectionContainer>
       <LeftContent>
-        <PlaceholderText>[애호박 캐릭터 이미지]</PlaceholderText>
+        <StyledImage src={mascot3} alt="mascot3" />
       </LeftContent>
       <RightContent>
         <SmallText>"낮은 수수료 & 폭발적 판매량"</SmallText>
         <LargeTitle>저렴한 가격의 핵심은 판매자와의 상생입니다.</LargeTitle>
-        <SmallText>
+        <SmallText1>
           애호박은 낮은 수수료와 실시간 가격반영을 통한 판매량 증대로, 
           판매자가 저가로도 수익을 내도록 적극 투자합니다.
-        </SmallText>
+        </SmallText1>
         <FeaturesGrid>
           <FeatureGridItem>
             <FeatureValueBox>3%</FeatureValueBox>
@@ -31,12 +33,12 @@ function FifthSection() {
             <FeatureLabel>소상공인 목표</FeatureLabel>
           </FeatureGridItem>
         </FeaturesGrid>
-        <SmallText>품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!</SmallText>
-        <Button>설치하기</Button>
+        <SmallText2>품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!</SmallText2>
+        <CTAButton>설치하기</CTAButton>
       </RightContent>
     </SectionContainer>
   );
-}
+};
 
 export default FifthSection;
 
@@ -44,88 +46,139 @@ const SectionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
+  padding: 20px 0; 
+  margin-left: -50px; 
+  margin-bottom: 10%;
+  max-width:1200px; 
 `;
 
 const LeftContent = styled.div`
   flex: 1;
+  display: flex;
   position: relative;
+  justify-content: center; 
+  align-items: flex-end;  
+  height: 100%; 
 `;
 
 const RightContent = styled.div`
   flex: 1;
-  padding-left: 50px;
+  padding-left: 20px; 
 `;
 
 const SmallText = styled.p`
-  font-size: 16px;
-  color: black;
+  font-size: 24px;
+  font-weight: 800;
+  color: #333;
   margin-bottom: 10px;
+  padding-left: 250px; 
 `;
 
 const LargeTitle = styled.h2`
-  font-size: 36px;
-  font-weight: bold;
+${({ theme }) => theme.fonts.roboto_medium};
+  font-size: 36px; 
+  font-weight: 500;
   color: #333;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 250px; 
+  white-space: nowrap;
+  line-height: 40px;
+  text-shadow: -1px -1px 0 #333, 1px -1px 0 #333,-1px 1px 0 #333, 1px 1px 0 #333;
+  
+  
 `;
+
+const SmallText1 = styled.p`
+  font-size: 15px; 
+  color: #555555;
+  padding-left: 250px; 
+  white-space: nowrap;
+  margin-bottom: 60px;
+  letter-spacing: -2px;
+`;
+
+const SmallText2 = styled.p`
+  font-size: 16px; 
+  color: #555555;
+  margin-left: 190px;
+  white-space: nowrap;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 480px;
+`;
+
 
 const FeaturesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);    
+  gap: 10px; 
+  margin-bottom: 40px; 
+  margin-left: 380px;
+   
 `;
 
 const FeatureGridItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px; 
+  border-radius: 8px;
+  
 `;
 
 const FeatureValueBox = styled.div`
-  background-color: #2E7D32;
+  background-color: #054F2A;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 280px; 
+  height: 120px;
   color: white;
-  padding: 20px;
   text-align: center;
-  border-radius: 8px;
-  width: 100%;
-  font-size: 24px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-size: 58px; 
+  font-weight: 700;
   margin-bottom: 10px;
 `;
 
 const FeatureLabel = styled.div`
-  font-size: 14px;
+  font-weight: 900;
+  font-size: 18px; 
   color: #333;
   text-align: center;
+  
 `;
 
-const Button = styled.button`
-  background-color: #4CAF50;
+const CTAButton = styled.button`
+  background-color: #10A36B;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px; 
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   width: 100%;
+  max-width:500px; 
+  margin-left: 420px;
+  margin-bottom: 150px;
   &:hover {
     background-color: #45a049;
   }
 `;
 
-const PlaceholderText = styled.div`
-  background-color: rgba(224, 224, 224, 0.9);
-  color: #333;
-  padding: 10px;
-  text-align: center;
-  font-style: italic;
-  font-weight: bold;
-  border: 1px dashed #666;
-  margin: 10px;
-`;
+
+const StyledImage = styled.img`
+  width: 350px; 
+  height: auto;
+  margin-bottom: 100px; 
+  margin-right: -600px; 
+  
+ `;
+
