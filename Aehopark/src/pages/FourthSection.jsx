@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 function FourthSection() {
@@ -6,13 +7,13 @@ function FourthSection() {
       <ContentContainer>
         <TextStack>
           <LargeTextFrame>
-            애호박은 구매자'만' 신경쓰는 플랫폼이 아닙니다
+            애호박은 구매자 <span className="highlight">'만'</span>  신경쓰는 플랫폼이 아닙니다.
           </LargeTextFrame>
         </TextStack>
       </ContentContainer>
     </SectionContainer>
   );
-}
+};
 
 export default FourthSection;
 
@@ -21,11 +22,15 @@ const SectionContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
+  margin-top:150px;
+  margin-bottom:180px;
 `;
 
 const ContentContainer = styled.div`
   flex: 1;
-  margin-right: 20px;
+  
+  background :#10A36B;
+  width: 4000px; 
 `;
 
 const TextStack = styled.div`
@@ -33,9 +38,15 @@ const TextStack = styled.div`
 `;
 
 const LargeTextFrame = styled.p`
-  margin: 20px 0;
-  font-size: 24px;
-  font-weight: bold;
+ ${({ theme }) => theme.fonts.roboto_medium};
+  margin: 20px 10px;
+  padding-top:10px;
+  font-size: 22px;
+  font-weight: 900;
   text-align: center;
-  color: #333;
+  color: #FFFFFF;
+
+  .highlight {
+    color: yellow;
+  }
 `;

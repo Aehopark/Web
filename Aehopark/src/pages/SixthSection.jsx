@@ -1,17 +1,18 @@
+import React from 'react';
 import styled from 'styled-components';
+import background from '../assets/background.png';
 
 function SixthSection() {
   return (
     <BackgroundSection>
       <SectionOverlay>
         <ContentContainer>
-          <SmallText>"농장에서 식탁으로"</SmallText>
-          <LargeTitle>가장 저렴한 제철 식품을 만나보세요</LargeTitle>
+          <StyledImage src={background } alt="background " />
         </ContentContainer>
       </SectionOverlay>
     </BackgroundSection>
   );
-}
+};
 
 export default SixthSection;
 
@@ -21,6 +22,7 @@ const BackgroundSection = styled.div`
   background-position: center;
   height: 400px;
   position: relative;
+  margin-bottom: 20%; 
 `;
 
 const SectionOverlay = styled.div`
@@ -50,4 +52,10 @@ const LargeTitle = styled.h2`
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
+`;
+
+const StyledImage = styled.img`
+  width: 100%; 
+  height: auto;
+  margin-bottom: 10px; 
 `;
