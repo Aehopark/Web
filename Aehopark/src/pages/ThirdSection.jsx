@@ -3,7 +3,7 @@ import img3 from '../assets/img3.png';
 import mascot2 from '../assets/mascot2.png';
 import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 
-function ThirdSection() {
+function ThirdSection({ onMoveToInstallBtn }) {
   return (
     <ScrollAnimation startingPoint="bottom" duration={0.5} amount="sm" delay={0.1} repeat>
       <SectionContainer>
@@ -22,7 +22,7 @@ function ThirdSection() {
             <FeatureListItem>소상공인들과의 직접적인 농산물 거래.</FeatureListItem>
             <FeatureListItem>농산물 직거래 기능으로, 최소값으로 구매 가능.</FeatureListItem>
           </FeatureList>
-          <CTAButton>설치하기</CTAButton>
+          <CTAButton onClick={onMoveToInstallBtn}>설치하기</CTAButton>
         </RightContent>
       </SectionContainer>
     </ScrollAnimation>

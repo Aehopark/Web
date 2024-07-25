@@ -30,7 +30,7 @@ const Navbar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
 `;
 

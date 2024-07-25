@@ -5,7 +5,7 @@ import img3 from '../assets/img3.png';
 import section from '../assets/section.png';
 import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 
-function FirstSection() {
+function FirstSection({ onMoveToInstallBtn }) {
   return (
     <ScrollAnimation startingPoint="bottom" duration={0.5} amount="sm" delay={0.1} repeat>
       <SectionContainer>
@@ -25,7 +25,7 @@ function FirstSection() {
             </HeroTitle1>
             <HeroTitle2>집에서 손쉽게</HeroTitle2>
             <HeroSubtitle>#심플한 가격비교 #애호박으로 최저가 장보기</HeroSubtitle>
-            <CTAButton>설치하기</CTAButton>
+            <CTAButton onClick={onMoveToInstallBtn}>설치하기</CTAButton>
           </RightSection>
         </ContentWrapper>
         <BackgroundPlaceholder>
@@ -41,7 +41,7 @@ export default FirstSection;
 const SectionContainer = styled.div`
   position: relative;
   padding: 50px 0;
-  background-color: #f0f8f0;
+  margin-top: 80px; //퍼스트 섹션 빼려고 넣은 거에요. 합의 후 조정 필요
 `;
 
 const ContentWrapper = styled.div`
@@ -144,7 +144,7 @@ const BackgroundPlaceholder = styled.div`
   align-items: center;
   font-size: 24px;
   color: #aaa;
-  opacity: 0.3;
+  opacity: 0.45;
   z-index: 0;
 `;
 
@@ -173,6 +173,6 @@ const StyledImage = styled.img`
 `;
 
 const StyledSection = styled.img`
-  width: 100%;
+  width: 100vw;
   height: 100%;
 `;
