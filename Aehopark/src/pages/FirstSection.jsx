@@ -1,42 +1,47 @@
-import React from 'react';
-import styled  from 'styled-components';
+import styled from 'styled-components';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
 import section from '../assets/section.png';
+import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 
 function FirstSection() {
   return (
-    <SectionContainer>
-      <ContentWrapper>
-        <LeftSection>
-          <PhoneImage>
-           <StyledImage src={img1} alt="image1" className="left" />
-           <StyledImage src={img2} alt="image2" className="center" />
-           <StyledImage src={img3} alt="image3" className="right" />
-          </PhoneImage>
-        </LeftSection>
-        <RightSection>
-          <LogoLarge>Aehopark</LogoLarge>
-          <HeroTitle1>알뜰 장보기,<br /></HeroTitle1>
-          <HeroTitle2>집에서 손쉽게</HeroTitle2>
-          <HeroSubtitle>#심플한 가격비교 #애호박으로 최저가 장보기</HeroSubtitle>
-          <CTAButton>설치하기</CTAButton>
-        </RightSection>
-      </ContentWrapper>
-      <BackgroundPlaceholder>
-       <StyledSection src={section} alt="section" />
-      </BackgroundPlaceholder>
-    </SectionContainer>
+    <ScrollAnimation startingPoint="bottom" duration={0.5} amount="sm" delay={0.1} repeat>
+      <SectionContainer>
+        <ContentWrapper>
+          <LeftSection>
+            <PhoneImage>
+              <StyledImage src={img1} alt="image1" className="left" />
+              <StyledImage src={img2} alt="image2" className="center" />
+              <StyledImage src={img3} alt="image3" className="right" />
+            </PhoneImage>
+          </LeftSection>
+          <RightSection>
+            <LogoLarge>Aehopark</LogoLarge>
+            <HeroTitle1>
+              알뜰 장보기,
+              <br />
+            </HeroTitle1>
+            <HeroTitle2>집에서 손쉽게</HeroTitle2>
+            <HeroSubtitle>#심플한 가격비교 #애호박으로 최저가 장보기</HeroSubtitle>
+            <CTAButton>설치하기</CTAButton>
+          </RightSection>
+        </ContentWrapper>
+        <BackgroundPlaceholder>
+          <StyledSection src={section} alt="section" />
+        </BackgroundPlaceholder>
+      </SectionContainer>
+    </ScrollAnimation>
   );
-};
+}
 
 export default FirstSection;
 
 const SectionContainer = styled.div`
   position: relative;
   padding: 50px 0;
-  background-color: #f0f8f0; 
+  background-color: #f0f8f0;
 `;
 
 const ContentWrapper = styled.div`
@@ -65,7 +70,7 @@ const PhoneImage = styled.div`
   width: 100%;
   max-width: 500px;
   height: 500px;
-  
+
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -76,46 +81,43 @@ const PhoneImage = styled.div`
 const LogoLarge = styled.div`
   ${({ theme }) => theme.fonts.sansita_one};
   color: ${({ theme }) => theme.colors.pc1};
-  font-size:100px;
+  font-size: 100px;
   font-weight: 900;
   margin-bottom: 20px;
 `;
 
 const HeroTitle1 = styled.h1`
- ${({ theme }) => theme.fonts.roboto_medium};
+  ${({ theme }) => theme.fonts.roboto_medium};
   color: #333;
   font-size: 34px;
   margin-bottom: 20px;
   font-weight: 900;
   padding-top: 30px;
   transform: scaleY(1.09);
- 
 `;
 
-const HeroTitle2= styled.h1`
+const HeroTitle2 = styled.h1`
   ${({ theme }) => theme.fonts.roboto_medium};
   font-size: 42px;
   color: #333;
   margin-bottom: 30px;
   font-weight: 900;
   transform: scaleY(1.08);
- 
- 
 `;
 const HeroSubtitle = styled.p`
   font-size: 14px;
   color: ${({ theme }) => theme.colors.black};
-  padding-top:10px;
+  padding-top: 10px;
   margin-bottom: 40px;
-  font-weight: 500;
-  
+  ${({ theme }) => theme.fonts.roboto_medium}
+  font-weight: 1000;
 `;
 
 const CTAButton = styled.button`
-  background-color: #10A36B;
+  background-color: #10a36b;
   color: white;
   padding: 15px 32px;
-  text-align:center;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   width: 450px;
@@ -125,7 +127,7 @@ const CTAButton = styled.button`
   border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
- 
+
   &:hover {
     background-color: #45a049;
   }
@@ -152,11 +154,10 @@ const StyledImage = styled.img`
   position: absolute;
   border-radius: 20px;
   transition: transform 0.3s ease;
- 
+
   &.left {
     left: 214;
     z-index: 3;
-    
   }
 
   &.center {
@@ -167,7 +168,7 @@ const StyledImage = styled.img`
   &.right {
     right: 0;
     z-index: 1;
-    transform: translateX(151px); 
+    transform: translateX(151px);
   }
 `;
 
