@@ -1,18 +1,20 @@
-import React from 'react';
 import styled from 'styled-components';
 import background from '../assets/background.png';
+import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 
 function SixthSection() {
   return (
-    <BackgroundSection>
-      <SectionOverlay>
-        <ContentContainer>
-          <StyledImage src={background } alt="background " />
-        </ContentContainer>
-      </SectionOverlay>
-    </BackgroundSection>
+    <ScrollAnimation startingPoint="bottom" duration={0.5} amount="sm" delay={0.1} repeat>
+      <BackgroundSection>
+        <SectionOverlay>
+          <ContentContainer>
+            <StyledImage src={background} alt="background " />
+          </ContentContainer>
+        </SectionOverlay>
+      </BackgroundSection>
+    </ScrollAnimation>
   );
-};
+}
 
 export default SixthSection;
 
@@ -22,7 +24,7 @@ const BackgroundSection = styled.div`
   background-position: center;
   height: 400px;
   position: relative;
-  margin-bottom: 20%; 
+  margin-bottom: 20%;
 `;
 
 const SectionOverlay = styled.div`
@@ -55,7 +57,7 @@ const LargeTitle = styled.h2`
 `;
 
 const StyledImage = styled.img`
-  width: 100%; 
+  width: 100%;
   height: auto;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 `;

@@ -10,9 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lasbe/react-scroll-animation": "^2.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.1",
+    "react-router-dom": "^6.25.1",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
