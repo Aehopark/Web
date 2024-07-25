@@ -24,36 +24,44 @@ function App() {
     }
   };
 
+  const onMoveToInstallBtn = (event) => {
+    if (event.target.innerText === '설치하기') {
+      alert('아직 어플이 출시되지 않았어요 ㅜㅜ. \n사전 예약하고 조금만 더 기다려주세요!');
+      seventhSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <AppContainer>
-      <Nav onMoveToFocus={onMoveToFocus} />
-      <FirstSection />
-      <div ref={secondSectionRef}>
-        <TrashContainer></TrashContainer>
-      </div>
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
-      <SixthSection />
-      <div ref={seventhSectionRef}>
-        <SeventhSection />
-      </div>
-      <EighthSection />
+    <>
+      <FirstSection onMoveToInstallBtn={onMoveToInstallBtn} />
+      <AppContainer>
+        <Nav onMoveToFocus={onMoveToFocus} />
+        <div ref={secondSectionRef}>
+          <TrashContainer></TrashContainer>
+        </div>
+        <SecondSection />
+        <ThirdSection onMoveToInstallBtn={onMoveToInstallBtn} />
+        <FourthSection />
+        <FifthSection onMoveToInstallBtn={onMoveToInstallBtn} />
+        <SixthSection />
+        <div ref={seventhSectionRef}>
+          <SeventhSection />
+        </div>
+        <EighthSection />
+      </AppContainer>
       <Footer />
-    </AppContainer>
+    </>
   );
 }
 
 export default App;
 
 const AppContainer = styled.div`
-  height: 100vh;
-  max-width: 1400px;
+  height: 100%;
+  /* width: 100vw; */
+  max-width: 80%;
   margin: 0 auto;
-  background-color: #ffffff;
   position: relative;
-  margin-top: 90px;
 `;
 
 //어플정보 누르면 살짝 가려서 중간에 trash container 만들어서 거기로 타겟팅 되게 했어요

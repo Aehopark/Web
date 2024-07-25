@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import mascot3 from '../assets/mascot3.png';
 import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 
-function FifthSection() {
+function FifthSection({ onMoveToInstallBtn }) {
   return (
     <ScrollAnimation startingPoint="bottom" duration={0.5} amount="sm" delay={0.1} repeat>
       <SectionContainer>
@@ -35,7 +35,7 @@ function FifthSection() {
             </FeatureGridItem>
           </FeaturesGrid>
           <SmallText2>품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!</SmallText2>
-          <CTAButton>설치하기</CTAButton>
+          <CTAButton onClick={onMoveToInstallBtn}>설치하기</CTAButton>
         </RightContent>
       </SectionContainer>
     </ScrollAnimation>

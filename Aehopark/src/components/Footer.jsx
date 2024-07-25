@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 function Footer() {
@@ -10,15 +9,15 @@ function Footer() {
       </FooterContent>
     </FooterContainer>
   );
-};
+}
 
 export default Footer;
 
 const FooterContainer = styled.footer`
-  background-color: #2E322C;
+  background-color: #2e322c;
   color: white;
   padding: 20px 0;
-  width: 100%;
+  width: 100vw;
 `;
 
 const FooterContent = styled.div`
@@ -31,7 +30,7 @@ const FooterContent = styled.div`
 `;
 
 const FooterLogo = styled.h2`
- ${({ theme }) => theme.fonts.sansita_one};
+  ${({ theme }) => theme.fonts.sansita_one};
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
   font-weight: bold;
