@@ -10,6 +10,7 @@ import EighthSection from './pages/EighthSection';
 import Footer from './components/Footer';
 import { useRef } from 'react';
 import styled from 'styled-components';
+import ScrollUpBtn from './components/ScrollUpBtn';
 
 function App() {
   const secondSectionRef = useRef(null);
@@ -50,6 +51,7 @@ function App() {
         <EighthSection />
       </AppContainer>
       <Footer />
+      <ScrollUpBtn />
     </>
   );
 }
