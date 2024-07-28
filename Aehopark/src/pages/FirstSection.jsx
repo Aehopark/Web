@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
-import section from '../assets/section.png';
+import section from '../assets/section_fix.png';
 import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 
 function FirstSection({ onMoveToInstallBtn }) {

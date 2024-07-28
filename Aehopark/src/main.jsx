@@ -10,11 +10,11 @@ import Router from './routes/Router.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router />
-        <App />
+        {/* <App /> */}
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
