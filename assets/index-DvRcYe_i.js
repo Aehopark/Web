@@ -73,7 +73,7 @@ Error generating stack: `+i.message+`
   &:hover {
     color: ${({theme:e})=>e.colors.pc1};
   }
-`,T0="/assets/img1-8bxu85Vj.png",vu="/assets/img2-TlPVqj0N.png",yu="/assets/img3-jh5RkgL8.png",I0="/assets/section_fix-Co411-tB.png";var L0=function(e,t){var n=$.useState(!1),r=n[0],o=n[1],i=$.useRef(null),l=$.useRef(null);return $.useEffect(function(){if(i.current){var u=function(h){h.forEach(function(d){if(d.isIntersecting){if(t===0){o(!0);return}l.current=setTimeout(function(){o(!0)},t*1e3)}else e&&o(!1),l.current&&clearTimeout(l.current)},[])},s={root:null,rootMargin:"0px",threshold:0},a=new IntersectionObserver(u,s);return a.observe(i.current),function(){a.disconnect()}}},[e,t]),{isInViewport:r,ref:i}},ii=function(){return ii=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},ii.apply(this,arguments)},sn=function(e){var t,n=e.children,r=e.startingPoint,o=r===void 0?"top":r,i=e.duration,l=i===void 0?.5:i,u=e.amount,s=u===void 0?"md":u,a=e.delay,h=a===void 0?0:a,d=e.repeat,m=d===void 0?!1:d,v=L0(m,h),x=v.ref,w=v.isInViewport;if(l<0)throw new Error("duration 값(애니메이션 지속 시간)은 0보다 작을 수 없습니다.");if(h<0)throw new Error("딜레이 시간은 0보다 작을 수 없습니다.");return ye.cloneElement(n,{ref:x,style:ii(ii({},(t=n==null?void 0:n.props)===null||t===void 0?void 0:t.style),{opacity:w?1:0,animation:w&&`
+`,T0="/Web/assets/img1-8bxu85Vj.png",vu="/Web/assets/img2-TlPVqj0N.png",yu="/Web/assets/img3-jh5RkgL8.png",I0="/Web/assets/section_fix-Co411-tB.png";var L0=function(e,t){var n=$.useState(!1),r=n[0],o=n[1],i=$.useRef(null),l=$.useRef(null);return $.useEffect(function(){if(i.current){var u=function(h){h.forEach(function(d){if(d.isIntersecting){if(t===0){o(!0);return}l.current=setTimeout(function(){o(!0)},t*1e3)}else e&&o(!1),l.current&&clearTimeout(l.current)},[])},s={root:null,rootMargin:"0px",threshold:0},a=new IntersectionObserver(u,s);return a.observe(i.current),function(){a.disconnect()}}},[e,t]),{isInViewport:r,ref:i}},ii=function(){return ii=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},ii.apply(this,arguments)},sn=function(e){var t,n=e.children,r=e.startingPoint,o=r===void 0?"top":r,i=e.duration,l=i===void 0?.5:i,u=e.amount,s=u===void 0?"md":u,a=e.delay,h=a===void 0?0:a,d=e.repeat,m=d===void 0?!1:d,v=L0(m,h),x=v.ref,w=v.isInViewport;if(l<0)throw new Error("duration 값(애니메이션 지속 시간)은 0보다 작을 수 없습니다.");if(h<0)throw new Error("딜레이 시간은 0보다 작을 수 없습니다.");return ye.cloneElement(n,{ref:x,style:ii(ii({},(t=n==null?void 0:n.props)===null||t===void 0?void 0:t.style),{opacity:w?1:0,animation:w&&`
     scroll-animation-`.concat(o,"-").concat(s," ").concat(l,`s forwards ease-out
   `)})})};function O0({onMoveToInstallBtn:e}){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(F0,{children:[g.jsxs(D0,{children:[g.jsx(M0,{children:g.jsxs(U0,{children:[g.jsx(fl,{src:T0,alt:"image1",className:"left"}),g.jsx(fl,{src:vu,alt:"image2",className:"center"}),g.jsx(fl,{src:yu,alt:"image3",className:"right"})]})}),g.jsxs(A0,{children:[g.jsx(B0,{children:"Aehopark"}),g.jsxs(V0,{children:["알뜰 장보기,",g.jsx("br",{})]}),g.jsx(W0,{children:"집에서 손쉽게"}),g.jsx(H0,{children:"#심플한 가격비교 #애호박으로 최저가 장보기"}),g.jsx(Q0,{onClick:e,children:"설치하기"})]})]}),g.jsx(Y0,{children:g.jsx(K0,{src:I0,alt:"section"})})]})})}const F0=C.div`
   position: relative;
@@ -189,7 +189,7 @@ Error generating stack: `+i.message+`
 `,K0=C.img`
   width: 100vw;
   height: 100%;
-`,G0="/assets/mascot-3HYw16Yp.png",X0="/assets/money-Tb1UdLsA.png";function Z0(){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(J0,{children:[g.jsxs(q0,{children:[g.jsx(eg,{children:'"도매가 비교"'}),g.jsx(tg,{children:"주식처럼 실시간 가격비교"}),g.jsx(ng,{children:"애호박에서 가장 저렴한 농산물을 실시간으로 찾아보세요!"}),g.jsxs(rg,{children:[g.jsx(dl,{children:"오늘 식탁을 더 싸고 맛있게 즐길 수 있어요."}),g.jsx(dl,{children:"오프라인별로 농산물 가격을 한 번에 확인할 수 있어요."}),g.jsx(dl,{children:"가장 가격이 낮은 식재료가 어디서 파는지 알 수 있어요."})]})]}),g.jsxs(b0,{children:[g.jsxs(og,{children:[g.jsx(Qa,{src:vu,alt:"image2"}),g.jsx(Qa,{src:vu,alt:"image2"}),g.jsx(Ya,{src:G0,alt:"mascot",className:"left"}),g.jsx(Ya,{src:X0,alt:"money",className:"right"})]}),g.jsx(ig,{children:"가장 싼 가격, 가장 맛있는 계절에 농산물을 주방에서 만나보세요."})]})]})})}const J0=C.div`
+`,G0="/Web/assets/mascot-3HYw16Yp.png",X0="/Web/assets/money-Tb1UdLsA.png";function Z0(){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(J0,{children:[g.jsxs(q0,{children:[g.jsx(eg,{children:'"도매가 비교"'}),g.jsx(tg,{children:"주식처럼 실시간 가격비교"}),g.jsx(ng,{children:"애호박에서 가장 저렴한 농산물을 실시간으로 찾아보세요!"}),g.jsxs(rg,{children:[g.jsx(dl,{children:"오늘 식탁을 더 싸고 맛있게 즐길 수 있어요."}),g.jsx(dl,{children:"오프라인별로 농산물 가격을 한 번에 확인할 수 있어요."}),g.jsx(dl,{children:"가장 가격이 낮은 식재료가 어디서 파는지 알 수 있어요."})]})]}),g.jsxs(b0,{children:[g.jsxs(og,{children:[g.jsx(Qa,{src:vu,alt:"image2"}),g.jsx(Qa,{src:vu,alt:"image2"}),g.jsx(Ya,{src:G0,alt:"mascot",className:"left"}),g.jsx(Ya,{src:X0,alt:"money",className:"right"})]}),g.jsx(ig,{children:"가장 싼 가격, 가장 맛있는 계절에 농산물을 주방에서 만나보세요."})]})]})})}const J0=C.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -275,7 +275,7 @@ Error generating stack: `+i.message+`
     right: -150px;
     z-index: 2;
   }
-`,lg="/assets/mascot2-CxecAq-5.png";function ug({onMoveToInstallBtn:e}){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(sg,{children:[g.jsx(ag,{children:g.jsxs(gg,{children:[g.jsx(Ga,{src:yu,alt:"image3",className:"left"}),g.jsx(Ga,{src:yu,alt:"image3",className:"right"}),g.jsx(vg,{src:lg,alt:"mascot2",className:"left"})]})}),g.jsxs(cg,{children:[g.jsx(fg,{children:'"농장에서 식탁까지 무료 배송"'}),g.jsx(dg,{children:"알뜰하게 집에서 장보기"}),g.jsx(pg,{children:"더 이상 발로 뛰지 않고 모바일로 편하게 집에서 장보기 완료!"}),g.jsxs(hg,{children:[g.jsx(Ka,{children:"소상공인들과의 직접적인 농산물 거래."}),g.jsx(Ka,{children:"농산물 직거래 기능으로, 최소값으로 구매 가능."})]}),g.jsx(mg,{onClick:e,children:"설치하기"})]})]})})}const sg=C.div`
+`,lg="/Web/assets/mascot2-CxecAq-5.png";function ug({onMoveToInstallBtn:e}){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(sg,{children:[g.jsx(ag,{children:g.jsxs(gg,{children:[g.jsx(Ga,{src:yu,alt:"image3",className:"left"}),g.jsx(Ga,{src:yu,alt:"image3",className:"right"}),g.jsx(vg,{src:lg,alt:"mascot2",className:"left"})]})}),g.jsxs(cg,{children:[g.jsx(fg,{children:'"농장에서 식탁까지 무료 배송"'}),g.jsx(dg,{children:"알뜰하게 집에서 장보기"}),g.jsx(pg,{children:"더 이상 발로 뛰지 않고 모바일로 편하게 집에서 장보기 완료!"}),g.jsxs(hg,{children:[g.jsx(Ka,{children:"소상공인들과의 직접적인 농산물 거래."}),g.jsx(Ka,{children:"농산물 직거래 기능으로, 최소값으로 구매 가능."})]}),g.jsx(mg,{onClick:e,children:"설치하기"})]})]})})}const sg=C.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -415,7 +415,7 @@ Error generating stack: `+i.message+`
   .highlight {
     color: yellow;
   }
-`,Eg="/assets/mascot3-DkvCwFcY.png";function Cg({onMoveToInstallBtn:e}){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(_g,{children:[g.jsx(Pg,{children:g.jsx(Lg,{src:Eg,alt:"mascot3"})}),g.jsxs(jg,{children:[g.jsx(Ng,{children:'"낮은 수수료 & 폭발적 판매량"'}),g.jsx(zg,{children:"저렴한 가격의 핵심은 판매자와의 상생입니다."}),g.jsx($g,{children:"애호박은 낮은 수수료와 실시간 가격반영을 통한 판매량 증대로, 판매자가 저가로도 수익을 내도록 적극 투자합니다."}),g.jsxs(Tg,{children:[g.jsxs(co,{children:[g.jsx(fo,{children:"3%"}),g.jsx(po,{children:"판매 수수료율"})]}),g.jsxs(co,{children:[g.jsx(fo,{children:"무료"}),g.jsx(po,{children:"농산물 관리 서비스"})]}),g.jsxs(co,{children:[g.jsx(fo,{children:"1분"}),g.jsx(po,{children:"간편한 상품등록"})]}),g.jsxs(co,{children:[g.jsx(fo,{children:"상생"}),g.jsx(po,{children:"소상공인 목표"})]})]}),g.jsx(Rg,{children:"품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!"}),g.jsx(Ig,{onClick:e,children:"설치하기"})]})]})})}const _g=C.div`
+`,Eg="/Web/assets/mascot3-DkvCwFcY.png";function Cg({onMoveToInstallBtn:e}){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsxs(_g,{children:[g.jsx(Pg,{children:g.jsx(Lg,{src:Eg,alt:"mascot3"})}),g.jsxs(jg,{children:[g.jsx(Ng,{children:'"낮은 수수료 & 폭발적 판매량"'}),g.jsx(zg,{children:"저렴한 가격의 핵심은 판매자와의 상생입니다."}),g.jsx($g,{children:"애호박은 낮은 수수료와 실시간 가격반영을 통한 판매량 증대로, 판매자가 저가로도 수익을 내도록 적극 투자합니다."}),g.jsxs(Tg,{children:[g.jsxs(co,{children:[g.jsx(fo,{children:"3%"}),g.jsx(po,{children:"판매 수수료율"})]}),g.jsxs(co,{children:[g.jsx(fo,{children:"무료"}),g.jsx(po,{children:"농산물 관리 서비스"})]}),g.jsxs(co,{children:[g.jsx(fo,{children:"1분"}),g.jsx(po,{children:"간편한 상품등록"})]}),g.jsxs(co,{children:[g.jsx(fo,{children:"상생"}),g.jsx(po,{children:"소상공인 목표"})]})]}),g.jsx(Rg,{children:"품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!"}),g.jsx(Ig,{onClick:e,children:"설치하기"})]})]})})}const _g=C.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -521,7 +521,7 @@ Error generating stack: `+i.message+`
   height: auto;
   margin-bottom: 100px;
   margin-right: -600px;
-`,Og="/assets/background-BTO-d4TD.png";function Fg(){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsx(Dg,{children:g.jsx(Mg,{children:g.jsx(Ag,{children:g.jsx(Ug,{src:Og,alt:"background "})})})})})}const Dg=C.div`
+`,Og="/Web/assets/background-BTO-d4TD.png";function Fg(){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsx(Dg,{children:g.jsx(Mg,{children:g.jsx(Ag,{children:g.jsx(Ug,{src:Og,alt:"background "})})})})})}const Dg=C.div`
   background-image: url('/path-to-your-farm-worker-image.jpg');
   background-size: cover;
   background-position: center;
@@ -553,7 +553,7 @@ Error generating stack: `+i.message+`
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-`,Bg="/assets/cart-BLIZSVbV.png",Vg="/assets/particle-BYw-TgVu.png";function Wg(){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsx(Hg,{children:g.jsxs(Qg,{children:[g.jsx(Yg,{children:"애호박은 UMC 학생들끼리 개발중인 앱 서비스입니다."}),g.jsx(Gg,{children:"애호박과 함께 알찬 장바구니를 챙겨봐요!"}),g.jsxs(Xg,{children:[g.jsx(Xa,{src:Bg,alt:"cart",className:"bottom"}),g.jsxs(Zg,{children:[g.jsx(pl,{children:"이름"}),g.jsx(hl,{type:"text",placeholder:"이름을 작성해주세요"}),g.jsx(pl,{children:"이메일"}),g.jsx(hl,{type:"email",placeholder:"이메일을 작성해주세요"}),g.jsx(pl,{children:"전화번호"}),g.jsx(hl,{type:"tel",placeholder:"전화번호를 작성해주세요"}),g.jsx(Kg,{children:"저희 애호박은 고객님의 개인정보를 어플 개발 외에 사용하지 않는 것을 맹세하겠습니다."}),g.jsx(Jg,{children:"예약"})]})]}),g.jsx(Xa,{src:Vg,alt:"particle",className:"top"})]})})})}const Hg=C.div`
+`,Bg="/Web/assets/cart-BLIZSVbV.png",Vg="/Web/assets/particle-BYw-TgVu.png";function Wg(){return g.jsx(sn,{startingPoint:"bottom",duration:.5,amount:"sm",delay:.1,repeat:!0,children:g.jsx(Hg,{children:g.jsxs(Qg,{children:[g.jsx(Yg,{children:"애호박은 UMC 학생들끼리 개발중인 앱 서비스입니다."}),g.jsx(Gg,{children:"애호박과 함께 알찬 장바구니를 챙겨봐요!"}),g.jsxs(Xg,{children:[g.jsx(Xa,{src:Bg,alt:"cart",className:"bottom"}),g.jsxs(Zg,{children:[g.jsx(pl,{children:"이름"}),g.jsx(hl,{type:"text",placeholder:"이름을 작성해주세요"}),g.jsx(pl,{children:"이메일"}),g.jsx(hl,{type:"email",placeholder:"이메일을 작성해주세요"}),g.jsx(pl,{children:"전화번호"}),g.jsx(hl,{type:"tel",placeholder:"전화번호를 작성해주세요"}),g.jsx(Kg,{children:"저희 애호박은 고객님의 개인정보를 어플 개발 외에 사용하지 않는 것을 맹세하겠습니다."}),g.jsx(Jg,{children:"예약"})]})]}),g.jsx(Xa,{src:Vg,alt:"particle",className:"top"})]})})})}const Hg=C.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -647,7 +647,7 @@ Error generating stack: `+i.message+`
     bottom: -100px;
     z-index: 1;
   }
-`,qg="/assets/mascot4-BZOBQyT-.png";function bg(){return g.jsxs(e1,{children:[g.jsx(t1,{children:g.jsx(r1,{src:qg,alt:"mascot4"})}),g.jsxs(n1,{children:[g.jsx(ho,{children:" 대표 방유찬"}),g.jsx(ho,{children:" 이메일 : kdoo9350@naver.com"}),g.jsx(ho,{children:" 연락처 : 010-9350-8862"}),g.jsx(ho,{children:" 주소 :진주시 진주대로 501 508호"})]})]})}const e1=C.div`
+`,qg="/Web/assets/mascot4-BZOBQyT-.png";function bg(){return g.jsxs(e1,{children:[g.jsx(t1,{children:g.jsx(r1,{src:qg,alt:"mascot4"})}),g.jsxs(n1,{children:[g.jsx(ho,{children:" 대표 방유찬"}),g.jsx(ho,{children:" 이메일 : kdoo9350@naver.com"}),g.jsx(ho,{children:" 연락처 : 010-9350-8862"}),g.jsx(ho,{children:" 주소 :진주시 진주대로 501 508호"})]})]})}const e1=C.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -690,7 +690,7 @@ Error generating stack: `+i.message+`
 `,s1=C.p`
   font-size: 14px;
   margin: 0;
-`,a1="/assets/ScrollBtnImg-BRHd3P6L.png";function c1(){const e=()=>{window.scroll({top:0,behavior:"smooth"})};return g.jsx(f1,{onClick:e,src:a1})}const f1=C.img`
+`,a1="/Web/assets/ScrollBtnImg-BRHd3P6L.png";function c1(){const e=()=>{window.scroll({top:0,behavior:"smooth"})};return g.jsx(f1,{onClick:e,src:a1})}const f1=C.img`
   position: fixed;
   bottom: 0;
   right: 0;
@@ -807,4 +807,4 @@ body {
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */const tv="6";try{window.__reactRouterVersion=tv}catch{}const nv="startTransition",tc=hp[nv];function rv(e){let{basename:t,children:n,future:r,window:o}=e,i=$.useRef();i.current==null&&(i.current=x1({window:o,v5Compat:!0}));let l=i.current,[u,s]=$.useState({action:l.action,location:l.location}),{v7_startTransition:a}=r||{},h=$.useCallback(d=>{a&&tc?tc(()=>s(d)):s(d)},[s,a]);return $.useLayoutEffect(()=>l.listen(h),[l,h]),$.createElement(b1,{basename:t,children:n,location:u.location,navigationType:u.action,navigator:l,future:r})}var nc;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmit="useSubmit",e.UseSubmitFetcher="useSubmitFetcher",e.UseFetcher="useFetcher",e.useViewTransitionState="useViewTransitionState"})(nc||(nc={}));var rc;(function(e){e.UseFetcher="useFetcher",e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(rc||(rc={}));function ov(){return g.jsx(ev,{children:g.jsx(Zd,{path:"/",element:g.jsx(d1,{})})})}var iv={BASE_URL:"/",MODE:"production",DEV:!1,PROD:!0,SSR:!1};ml.createRoot(document.getElementById("root")).render(g.jsx(ye.StrictMode,{children:g.jsx(rv,{basename:iv.PUBLIC_URL,children:g.jsxs(C0,{theme:y1,children:[g.jsx(m1,{}),g.jsx(ov,{})]})})}));
+ */const tv="6";try{window.__reactRouterVersion=tv}catch{}const nv="startTransition",tc=hp[nv];function rv(e){let{basename:t,children:n,future:r,window:o}=e,i=$.useRef();i.current==null&&(i.current=x1({window:o,v5Compat:!0}));let l=i.current,[u,s]=$.useState({action:l.action,location:l.location}),{v7_startTransition:a}=r||{},h=$.useCallback(d=>{a&&tc?tc(()=>s(d)):s(d)},[s,a]);return $.useLayoutEffect(()=>l.listen(h),[l,h]),$.createElement(b1,{basename:t,children:n,location:u.location,navigationType:u.action,navigator:l,future:r})}var nc;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmit="useSubmit",e.UseSubmitFetcher="useSubmitFetcher",e.UseFetcher="useFetcher",e.useViewTransitionState="useViewTransitionState"})(nc||(nc={}));var rc;(function(e){e.UseFetcher="useFetcher",e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(rc||(rc={}));function ov(){return g.jsx(ev,{children:g.jsx(Zd,{path:"/",element:g.jsx(d1,{})})})}var iv={BASE_URL:"/Web/",MODE:"production",DEV:!1,PROD:!0,SSR:!1};ml.createRoot(document.getElementById("root")).render(g.jsx(ye.StrictMode,{children:g.jsx(rv,{basename:iv.PUBLIC_URL,children:g.jsxs(C0,{theme:y1,children:[g.jsx(m1,{}),g.jsx(ov,{})]})})}));
