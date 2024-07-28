@@ -5,12 +5,17 @@ import App from './App.jsx';
 import { GlobalStyle } from './styles/GlobalStyle.jsx';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme.jsx';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './routes/Router.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Router />
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
