@@ -17,7 +17,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -29,5 +30,5 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "vite": "^5.3.1"
   },
-  "homepage": "https://coldgeon.github.io/Web/"
+  "homepage": "https://aehopark.github.io/Web/"
 }

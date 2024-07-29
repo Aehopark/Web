@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ScrollBtnImg from '../assets/ScrollBtnImg.png';
+import ScrollBtnImg from '../assets/up.png';
 
 function ScrollUpBtn() {
   const scrollToTop = () => {
@@ -22,4 +22,9 @@ const ScrollBtn = styled.img`
   width: 70px;
   padding-right: 20px;
   padding-bottom: 20px;
+  opacity: 0.6;
+  &:hover {
+    transition: 0.7s, ease-in, 0.3s;
+    opacity: 1;
+  }
 `;

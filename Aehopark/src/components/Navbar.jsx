@@ -32,6 +32,9 @@ const Navbar = styled.nav`
   padding: 18px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Logo = styled.div`

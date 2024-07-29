@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import mascot4 from '../assets/mascot4.png';
 
@@ -16,7 +15,7 @@ function EighthSection() {
       </RightSection>
     </SectionContainer>
   );
-};
+}
 
 export default EighthSection;
 
@@ -24,6 +23,10 @@ const SectionContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -36,6 +39,11 @@ const RightSection = styled.div`
   align-items: flex-end;
   margin-top: -190px; 
   margin-right: 100px; 
+
+  @media (max-width: 768px) {
+    padding-left: 50px;
+    margin-bottom: 50px;
+  }
 `;
 
 const SmallText = styled.p`
@@ -50,4 +58,8 @@ const StyledImage = styled.img`
   height: 200px;
   margin-left: 200px; 
   margin-bottom: 300px;
+
+  @media (max-width: 768px) {
+    margin-left: 10%;
+  }
 `;

@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import { useRef } from 'react';
 import styled from 'styled-components';
 import ScrollUpBtn from './components/ScrollUpBtn';
+import swal from 'sweetalert';
+import './assets/css/App.css';
 
 function App() {
   const secondSectionRef = useRef(null);
@@ -27,8 +29,12 @@ function App() {
 
   const onMoveToInstallBtn = (event) => {
     if (event.target.innerText === '설치하기') {
-      alert('아직 어플이 출시되지 않았어요 ㅜㅜ. \n사전 예약하고 조금만 더 기다려주세요!');
-      seventhSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      swal({
+        title: '😭',
+        text: '아직 어플리케이션이 출시 되지 않았어요. \n\n   조금만 더 기다려주세요!',
+        // icon: 'info',
+        button: '사전예약 하러 가기',
+      }).then(seventhSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' }));
     }
   };
 
@@ -60,7 +66,6 @@ export default App;
 
 const AppContainer = styled.div`
   height: 100%;
-  /* width: 100vw; */
   max-width: 80%;
   margin: 0 auto;
   position: relative;

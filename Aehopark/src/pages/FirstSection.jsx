@@ -18,14 +18,22 @@ function FirstSection({ onMoveToInstallBtn }) {
             </PhoneImage>
           </LeftSection>
           <RightSection>
-            <LogoLarge>Aehopark</LogoLarge>
-            <HeroTitle1>
+            <LogoLarge className="desktop">Aehopark</LogoLarge>
+            <Title1>
               알뜰 장보기,
               <br />
-            </HeroTitle1>
-            <HeroTitle2>집에서 손쉽게</HeroTitle2>
-            <HeroSubtitle>#심플한 가격비교 #애호박으로 최저가 장보기</HeroSubtitle>
-            <CTAButton onClick={onMoveToInstallBtn}>설치하기</CTAButton>
+            </Title1>
+            <Title2>
+              <span className="mobileText">이제</span>집에서 손쉽게
+            </Title2>
+            <LogoLarge className="mobile">Aehopark</LogoLarge>
+            <Subtitle>
+              <span>#심플한 가격비교</span> <span>#애호박으로 최저가 장보기</span>
+            </Subtitle>
+            <CTAButton onClick={onMoveToInstallBtn}>
+              <span className="desktop">설치하기</span>
+              <span className="mobile">다운로드</span>
+            </CTAButton>
           </RightSection>
         </ContentWrapper>
         <BackgroundPlaceholder>
@@ -42,6 +50,9 @@ const SectionContainer = styled.div`
   position: relative;
   padding: 50px 0;
   margin-top: 80px; //퍼스트 섹션 빼려고 넣은 거에요. 합의 후 조정 필요
+  @media (max-width: 768px) {
+    margin-top: 0%;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -52,6 +63,10 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   z-index: 1;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -64,6 +79,10 @@ const RightSection = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding-left: 200px;
+
+  @media (max-width: 768px) {
+    padding-left: 10px;
+  }
 `;
 
 const PhoneImage = styled.div`
@@ -84,9 +103,26 @@ const LogoLarge = styled.div`
   font-size: 100px;
   font-weight: 900;
   margin-bottom: 20px;
+
+  &.mobile {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    transform: scale(0.9);
+    opacity: 0.8;
+
+    &.desktop {
+      display: none;
+    }
+
+    &.mobile {
+      display: inline;
+    }
+  }
 `;
 
-const HeroTitle1 = styled.h1`
+const Title1 = styled.h1`
   ${({ theme }) => theme.fonts.roboto_medium};
   color: #333;
   font-size: 34px;
@@ -94,23 +130,43 @@ const HeroTitle1 = styled.h1`
   font-weight: 900;
   padding-top: 30px;
   transform: scaleY(1.09);
+
+  @media (max-width: 768px) {
+    flex: 1;
+  }
 `;
 
-const HeroTitle2 = styled.h1`
+const Title2 = styled.h1`
   ${({ theme }) => theme.fonts.roboto_medium};
   font-size: 42px;
   color: #333;
   margin-bottom: 30px;
   font-weight: 900;
   transform: scaleY(1.08);
+
+  @media (max-width: 768px) {
+    .mobileText {
+      font-size: 25px;
+    }
+  }
 `;
-const HeroSubtitle = styled.p`
+
+const Subtitle = styled.p`
   font-size: 14px;
   color: ${({ theme }) => theme.colors.black};
   padding-top: 10px;
   margin-bottom: 40px;
   ${({ theme }) => theme.fonts.roboto_medium}
   font-weight: 1000;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+    font-weight: bold;
+
+    & > span {
+      display: block;
+    }
+  }
 `;
 
 const CTAButton = styled.button`
@@ -130,6 +186,23 @@ const CTAButton = styled.button`
 
   &:hover {
     background-color: #45a049;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 150px;
+    margin-left: 29%;
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: inline;
+    }
   }
 `;
 
@@ -170,9 +243,19 @@ const StyledImage = styled.img`
     z-index: 1;
     transform: translateX(151px);
   }
+
+  @media (max-width: 768px) {
+    display: none;
+
+    &.left {
+      display: block;
+      opacity: 1;
+    }
+  }
 `;
 
 const StyledSection = styled.img`
   width: 100vw;
   height: 100%;
+  object-fit: cover;
 `;

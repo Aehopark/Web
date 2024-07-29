@@ -10,12 +10,14 @@ function FifthSection({ onMoveToInstallBtn }) {
           <StyledImage src={mascot3} alt="mascot3" />
         </LeftContent>
         <RightContent>
-          <SmallText>"낮은 수수료 & 폭발적 판매량"</SmallText>
-          <LargeTitle>저렴한 가격의 핵심은 판매자와의 상생입니다.</LargeTitle>
-          <SmallText1>
-            애호박은 낮은 수수료와 실시간 가격반영을 통한 판매량 증대로, 판매자가 저가로도 수익을 내도록 적극
-            투자합니다.
-          </SmallText1>
+          <SmallText1>"낮은 수수료 & 폭발적 판매량"</SmallText1>
+          <LargeText>
+            <span>저렴한 가격의 핵심은</span> <span>판매자와의 상생입니다.</span>
+          </LargeText>
+          <SmallText2>
+            애호박은 낮은 수수료와 실시간 가격반영을 통한 판매량 <span>증대로, 판매자가 저가로도 수익을 내도록</span>{' '}
+            <span>적극 투자합니다.</span>
+          </SmallText2>
           <FeaturesGrid>
             <FeatureGridItem>
               <FeatureValueBox>3%</FeatureValueBox>
@@ -34,7 +36,7 @@ function FifthSection({ onMoveToInstallBtn }) {
               <FeatureLabel>소상공인 목표</FeatureLabel>
             </FeatureGridItem>
           </FeaturesGrid>
-          <SmallText2>품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!</SmallText2>
+          <SmallText3>품질과 가격에 자신있다면 판매량 증가는 맡겨주세요!</SmallText3>
           <CTAButton onClick={onMoveToInstallBtn}>설치하기</CTAButton>
         </RightContent>
       </SectionContainer>
@@ -49,9 +51,13 @@ const SectionContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  margin-left: -50px;
+  /* margin-left: 300px; */
   margin-bottom: 10%;
   max-width: 1200px;
+
+  @media (max-width: 768px) {
+    margin-left: -50px;
+  }
 `;
 
 const LeftContent = styled.div`
@@ -66,17 +72,27 @@ const LeftContent = styled.div`
 const RightContent = styled.div`
   flex: 1;
   padding-left: 20px;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    width: 100%;
+  }
 `;
 
-const SmallText = styled.p`
+const SmallText1 = styled.p`
   font-size: 24px;
   font-weight: 800;
   color: #333;
   margin-bottom: 10px;
   padding-left: 250px;
+
+  @media (max-width: 768px) {
+    color: ${({ theme }) => theme.colors.pc1};
+    padding-left: 20px;
+  }
 `;
 
-const LargeTitle = styled.h2`
+const LargeText = styled.h2`
   ${({ theme }) => theme.fonts.roboto_medium};
   font-size: 36px;
   font-weight: 500;
@@ -88,18 +104,32 @@ const LargeTitle = styled.h2`
   white-space: nowrap;
   line-height: 40px;
   text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    font-weight: 400;
+    padding-left: 20px;
+
+    & > span {
+      display: block;
+    }
+  }
 `;
 
-const SmallText1 = styled.p`
+const SmallText2 = styled.p`
   font-size: 15px;
   color: #555555;
   padding-left: 250px;
   white-space: nowrap;
   margin-bottom: 60px;
   letter-spacing: -2px;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
 `;
 
-const SmallText2 = styled.p`
+const SmallText3 = styled.p`
   font-size: 16px;
   color: #555555;
   margin-left: 190px;
@@ -107,6 +137,10 @@ const SmallText2 = styled.p`
   margin-top: 80px;
   margin-bottom: 20px;
   margin-left: 480px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const FeaturesGrid = styled.div`
@@ -116,6 +150,13 @@ const FeaturesGrid = styled.div`
   gap: 10px;
   margin-bottom: 40px;
   margin-left: 380px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    padding-left: 0px;
+  }
 `;
 
 const FeatureGridItem = styled.div`
@@ -167,6 +208,10 @@ const CTAButton = styled.button`
   &:hover {
     background-color: #45a049;
   }
+
+  @media (max-width: 768px) {
+    margin-left: 15%;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -174,4 +219,8 @@ const StyledImage = styled.img`
   height: auto;
   margin-bottom: 100px;
   margin-right: -600px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

@@ -9,7 +9,7 @@ function SeventhSection() {
       <SectionContainer>
         <LeftContent>
           <SmallText>애호박은 UMC 학생들끼리 개발중인 앱 서비스입니다.</SmallText>
-          <LargeTitle>애호박과 함께 알찬 장바구니를 챙겨봐요!</LargeTitle>
+          <LargeText>애호박과 함께 알찬 장바구니를 챙겨봐요!</LargeText>
           <ImageAndFormContainer>
             <StyledImage src={cart} alt="cart" className="bottom" />
             <RegistrationForm>
@@ -40,12 +40,22 @@ const SectionContainer = styled.div`
   align-items: center;
   padding: 50px 0;
   margin-bottom: 30%;
+  /* margin-left: 300px; */
+
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
 `;
 
 const LeftContent = styled.div`
   flex: 1;
   position: relative;
   margin-left: 10px;
+
+  @media (max-width: 768px) {
+    margin-left: -40px;
+  }
 `;
 
 const SmallText = styled.p`
@@ -56,7 +66,12 @@ const SmallText = styled.p`
   padding-top: 5%;
   padding-bottom: 2%;
   margin-left: 105px;
+
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 `;
+
 const SmallText1 = styled.p`
   font-size: 13px;
   font-weight: 900;
@@ -66,13 +81,17 @@ const SmallText1 = styled.p`
   padding-bottom: 2%;
 `;
 
-const LargeTitle = styled.h2`
+const LargeText = styled.h2`
   font-size: 36px;
   font-weight: 900;
   color: #333;
   margin-bottom: 20px;
   white-space: nowrap;
   margin-left: 100px;
+
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 `;
 
 const ImageAndFormContainer = styled.div`
@@ -80,6 +99,10 @@ const ImageAndFormContainer = styled.div`
   align-items: center;
   gap: 20px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const RegistrationForm = styled.form`
@@ -90,6 +113,11 @@ const RegistrationForm = styled.form`
   background-color: '#DBDBDB';
   max-width: 800px;
   padding-left: 200px;
+
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
 `;
 
 const Label = styled.label`
@@ -146,5 +174,14 @@ const StyledImage = styled.img`
     /*position: absolute;*/
     bottom: -100px;
     z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 150px;
+    &.bottom {
+      position: relative;
+      left: -150px;
+      top: 35px;
+    }
   }
 `;
