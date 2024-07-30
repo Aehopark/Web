@@ -845,6 +845,7 @@ Error generating stack: `+i.message+`
 
   @media (max-width: 768px) {
     margin-left: 0px;
+    font-size: 18px;
   }
 `,Xg=O.p`
   font-size: 13px;
@@ -863,6 +864,7 @@ Error generating stack: `+i.message+`
 
   @media (max-width: 768px) {
     margin-left: 0px;
+    font-size: 30px;
   }
 `,Gg=O.div`
   display: flex;
@@ -880,7 +882,7 @@ Error generating stack: `+i.message+`
   margin-left: 100px;
   background-color: '#DBDBDB';
   max-width: 700px;
-  padding-left: 100px;
+  padding-left: 240px;
 
   @media (max-width: 768px) {
     padding-left: 0px;
@@ -942,7 +944,7 @@ Error generating stack: `+i.message+`
   }
 
   @media (max-width: 768px) {
-    margin-left: 150px;
+    margin-left: 130px;
     &.bottom {
       position: relative;
       left: -150px;
@@ -1073,6 +1075,8 @@ Error generating stack: `+i.message+`
    조금만 더 기다려주세요!`,button:"사전예약 하러 가기"}).then(t.current.scrollIntoView({behavior:"smooth",block:"start"}))};return x.jsxs(x.Fragment,{children:[x.jsx(B0,{onMoveToInstallBtn:r}),x.jsxs(gv,{children:[x.jsx(M0,{onMoveToFocus:n}),x.jsx("div",{ref:e,children:x.jsx(vv,{})}),x.jsx(tg,{}),x.jsx(dg,{onMoveToInstallBtn:r}),x.jsx(Sg,{}),x.jsx(Pg,{onMoveToInstallBtn:r}),x.jsx(Fg,{}),x.jsx("div",{ref:t,children:x.jsx(Qg,{})}),x.jsx(ev,{})]}),x.jsx(iv,{}),x.jsx(fv,{})]})}const gv=O.div`
   height: 100%;
   max-width: 80%;
+  min-width: 80vw;
+  width: auto;
   margin: 0 auto;
   position: relative;
 `,vv=O.div`
