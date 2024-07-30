@@ -1114,7 +1114,7 @@ footer, header, hgroup, main, menu, nav, section {
 }
 body {
   line-height: 1;
-  overflow-x: hidden;
+  overflow-x: hidden;  //가로 스크롤바 없애기
 }
 menu, ol, ul {
   list-style: none;
