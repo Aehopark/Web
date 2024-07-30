@@ -799,7 +799,7 @@ Error generating stack: `+i.message+`
   }
 
   @media (max-width: 768px) {
-    margin-left: 15%;
+    margin-left: 10%;
   }
 `,$g=O.img`
   width: 350px;
@@ -879,12 +879,14 @@ Error generating stack: `+i.message+`
   gap: 20px;
   margin-left: 100px;
   background-color: '#DBDBDB';
-  max-width: 800px;
-  padding-left: 200px;
+  max-width: 700px;
+  padding-left: 100px;
 
   @media (max-width: 768px) {
     padding-left: 0px;
     margin-left: 0px;
+    margin-right: 100px;
+    width: 85%;
   }
 `,ml=O.label`
   font-size: 20px;
@@ -898,6 +900,9 @@ Error generating stack: `+i.message+`
   font-size: 16px;
   width: 580px;
   background: #dbdbdb;
+  @media (max-width: 768px) {
+    width: 570px;
+  }
 `,qg=O.button`
   background-color: #10a36b;
   color: white;
