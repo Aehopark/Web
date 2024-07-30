@@ -575,6 +575,9 @@ Error generating stack: `+i.message+`
   &:hover {
     background-color: #45a049;
   }
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `,xg=O.div`
   display: flex;
   justify-content: space-between;
@@ -799,7 +802,7 @@ Error generating stack: `+i.message+`
   }
 
   @media (max-width: 768px) {
-    margin-left: 10%;
+    margin-left: 6.5%;
   }
 `,$g=O.img`
   width: 350px;
@@ -886,7 +889,7 @@ Error generating stack: `+i.message+`
 
   @media (max-width: 768px) {
     padding-left: 0px;
-    margin-left: 0px;
+    margin-left: 13px;
     margin-right: 100px;
     width: 85%;
   }
@@ -896,14 +899,14 @@ Error generating stack: `+i.message+`
   margin-bottom: 3px;
   font-weight: bold;
 `,hl=O.input`
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
   width: 580px;
   background: #dbdbdb;
   @media (max-width: 768px) {
-    width: 570px;
+    width: 450px;
   }
 `,qg=O.button`
   background-color: #10a36b;
@@ -918,8 +921,12 @@ Error generating stack: `+i.message+`
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
-  max-width: 600px;
+  max-width: 580px;
   height: 45px;
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    width: 90%;
+  }
   &:hover {
     background-color: #45a049;
   }
@@ -1114,7 +1121,6 @@ footer, header, hgroup, main, menu, nav, section {
 }
 body {
   line-height: 1;
-  overflow-x: hidden;  //가로 스크롤바 없애기
 }
 menu, ol, ul {
   list-style: none;
@@ -1134,8 +1140,14 @@ table {
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  overflow-x: hidden;
 
 }
+
+html {
+  overflow-x: hidden;
+}
+//가로 스크롤바 없애기(web + app )
 `,Av={sansita_one:jn`
     font-family: 'Sansita', sans-serif;
     font-weight: 800;
