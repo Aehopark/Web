@@ -195,6 +195,9 @@ const CTAButton = styled.button`
   &:hover {
     background-color: #45a049;
   }
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
 const PhoneImageContainer = styled.div`

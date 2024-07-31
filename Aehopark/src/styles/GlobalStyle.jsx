@@ -33,7 +33,6 @@ footer, header, hgroup, main, menu, nav, section {
 }
 body {
   line-height: 1;
-  overflow-x: hidden;
 }
 menu, ol, ul {
   list-style: none;
@@ -53,6 +52,12 @@ table {
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  overflow-x: hidden;
 
 }
+
+html {
+  overflow-x: hidden;
+}
+//가로 스크롤바 없애기(web + app )
 `;

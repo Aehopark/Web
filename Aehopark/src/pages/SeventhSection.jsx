@@ -41,6 +41,7 @@ const SectionContainer = styled.div`
   padding: 50px 0;
   margin-bottom: 30%;
   /* margin-left: 300px; */
+  margin-top: 100px;
 
   @media (max-width: 768px) {
     padding-left: 0px;
@@ -69,6 +70,7 @@ const SmallText = styled.p`
 
   @media (max-width: 768px) {
     margin-left: 0px;
+    font-size: 18px;
   }
 `;
 
@@ -91,6 +93,7 @@ const LargeText = styled.h2`
 
   @media (max-width: 768px) {
     margin-left: 0px;
+    font-size: 1.65em;
   }
 `;
 
@@ -111,12 +114,14 @@ const RegistrationForm = styled.form`
   gap: 20px;
   margin-left: 100px;
   background-color: '#DBDBDB';
-  max-width: 800px;
-  padding-left: 200px;
+  max-width: 700px;
+  padding-left: 240px;
 
   @media (max-width: 768px) {
     padding-left: 0px;
-    margin-left: 0px;
+    margin-left: 13px;
+    margin-right: 100px;
+    width: 85%;
   }
 `;
 
@@ -128,12 +133,15 @@ const Label = styled.label`
 `;
 
 const InputField = styled.input`
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
   width: 580px;
   background: #dbdbdb;
+  @media (max-width: 768px) {
+    width: 85%;
+  }
 `;
 
 const CTAButton = styled.button`
@@ -149,8 +157,12 @@ const CTAButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
-  max-width: 600px;
+  max-width: 650px;
   height: 45px;
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    width: 90%;
+  }
   &:hover {
     background-color: #45a049;
   }
@@ -177,7 +189,7 @@ const StyledImage = styled.img`
   }
 
   @media (max-width: 768px) {
-    margin-left: 150px;
+    margin-left: 130px;
     &.bottom {
       position: relative;
       left: -150px;
