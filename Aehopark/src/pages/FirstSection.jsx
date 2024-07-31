@@ -32,7 +32,7 @@ function FirstSection({ onMoveToInstallBtn }) {
             </Subtitle>
             <CTAButton onClick={onMoveToInstallBtn}>
               <span className="desktop">설치하기</span>
-              <span className="mobile">다운로드</span>
+              <span className="mobile">설치하기</span>
             </CTAButton>
           </RightSection>
         </ContentWrapper>

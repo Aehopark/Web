@@ -5,7 +5,7 @@ function EighthSection() {
   return (
     <SectionContainer>
       <LeftSection>
-        <StyledImage src={mascot4} alt="mascot4"/>
+        <StyledImage src={mascot4} alt="mascot4" />
       </LeftSection>
       <RightSection>
         <SmallText>&nbsp;대표 방유찬</SmallText>
@@ -37,8 +37,8 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: -190px; 
-  margin-right: 100px; 
+  margin-top: -190px;
+  margin-right: 100px;
 
   @media (max-width: 768px) {
     padding-left: 50px;
@@ -51,12 +51,15 @@ const SmallText = styled.p`
   color: black;
   margin-bottom: 10px;
   text-align: right;
+  @media (max-width: 768px) {
+    margin-left: 15px;
+  }
 `;
 
 const StyledImage = styled.img`
   width: 280px;
   height: 200px;
-  margin-left: 200px; 
+  margin-left: 200px;
   margin-bottom: 300px;
 
   @media (max-width: 768px) {

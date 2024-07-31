@@ -13,7 +13,7 @@ function SixthSection() {
 export default SixthSection;
 
 const StyledImage = styled.img`
-  width: 100%;
+  width: 100vw;
   height: auto;
   margin-bottom: 10px;
 `;

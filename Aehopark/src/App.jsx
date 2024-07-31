@@ -50,7 +50,10 @@ function App() {
         <ThirdSection onMoveToInstallBtn={onMoveToInstallBtn} />
         <FourthSection />
         <FifthSection onMoveToInstallBtn={onMoveToInstallBtn} />
-        <SixthSection />
+      </AppContainer>
+      <SixthSection />
+
+      <AppContainer>
         <div ref={seventhSectionRef}>
           <SeventhSection />
         </div>
@@ -67,6 +70,8 @@ export default App;
 const AppContainer = styled.div`
   height: 100%;
   max-width: 80%;
+  min-width: 80vw;
+  width: auto;
   margin: 0 auto;
   position: relative;
 `;

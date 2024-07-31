@@ -57,6 +57,7 @@ const SectionContainer = styled.div`
 
   @media (max-width: 768px) {
     margin-left: -50px;
+    margin-right: 12%;
   }
 `;
 
@@ -126,6 +127,7 @@ const SmallText2 = styled.p`
 
   @media (max-width: 768px) {
     padding-left: 20px;
+    white-space: normal;
   }
 `;
 
@@ -210,7 +212,7 @@ const CTAButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    margin-left: 15%;
+    margin-left: 6.5%;
   }
 `;
 
