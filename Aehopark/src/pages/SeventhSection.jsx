@@ -2,8 +2,89 @@ import styled from 'styled-components';
 import cart from '../assets/cart.png';
 import particle from '../assets/particle.png';
 import { ScrollAnimation } from '@lasbe/react-scroll-animation';
+import swal from 'sweetalert';
+import { useState } from 'react';
+import axios from 'axios';
 
 function SeventhSection() {
+  const [uname, setName] = useState('');
+  const [uemail, setEmail] = useState('');
+  const [uphone, setPhone] = useState('');
+
+  const [isEmail, setIsEmail] = useState('');
+
+  const [emailMsg, setEmailMsg] = useState('');
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_SERVER_URL}/user/reserve`, {
+        name: uname,
+        email: uemail,
+        phone: uphone,
+      })
+      .then((response) => {
+        console.log('200', response.data);
+        if (response.status === 200) {
+          swal({
+            text: '사전예약 되었습니다!',
+            icon: 'success',
+            button: '확인',
+          });
+          setName('');
+          setEmail('');
+          setPhone('');
+        }
+      })
+      //error가 발생한다면 catch 하는 부분
+      .catch((error) => {
+        console.log(error.response);
+        if (error.response.status === 409) {
+          swal({
+            icon: 'warning',
+            text: '이미 가입된 이메일입니다! 조금만 기다려 주세요~😘',
+            button: '확인',
+          });
+          setName('');
+          setEmail('');
+          setPhone('');
+        } else if (error.response.status === 400) {
+          swal({
+            title: '😭',
+            text: '잘못된 요청입니다!',
+            button: '확인',
+          });
+          setName('');
+          setEmail('');
+          setPhone('');
+        }
+      });
+  };
+
+  const onChangeName = (e) => {
+    const currentName = e.target.value;
+    setName(currentName);
+  };
+
+  const onChangeEmail = (e) => {
+    const currentEmail = e.target.value;
+    setEmail(currentEmail);
+    const emailRegExp = /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
+
+    if (!emailRegExp.test(currentEmail)) {
+      setEmailMsg('이메일의 형식이 올바르지 않습니다');
+      setIsEmail(false);
+    } else {
+      setIsEmail(true);
+    }
+  };
+
+  const onChangePhone = (e) => {
+    const currentPhone = e.target.value;
+    setPhone(currentPhone);
+  };
+
   return (
     <ScrollAnimation startingPoint="bottom" duration={0.5} amount="sm" delay={0.1} repeat>
       <SectionContainer>
@@ -12,13 +93,20 @@ function SeventhSection() {
           <LargeText>애호박과 함께 알찬 장바구니를 챙겨봐요!</LargeText>
           <ImageAndFormContainer>
             <StyledImage src={cart} alt="cart" className="bottom" />
-            <RegistrationForm>
+            <RegistrationForm onSubmit={submitHandler}>
               <Label>이름</Label>
-              <InputField type="text" placeholder="이름을 작성해주세요" />
+              <InputField type="text" value={uname} onChange={onChangeName} placeholder="이름을 작성해주세요" />
               <Label>이메일</Label>
-              <InputField type="email" placeholder="이메일을 작성해주세요" />
+              <InputField type="email" value={uemail} onChange={onChangeEmail} placeholder="이메일을 작성해주세요" />
+              <MsgP hidden={isEmail}>{emailMsg}</MsgP>
+
               <Label>전화번호</Label>
-              <InputField type="tel" placeholder="전화번호를 작성해주세요" />
+              <InputField
+                type="tel"
+                value={uphone}
+                onChange={onChangePhone}
+                placeholder="전화번호를 작성해주세요 (ex.01012341234)"
+              />
               <SmallText1>
                 저희 애호박은 고객님의 개인정보를 어플 개발 외에 사용하지 않는 것을 맹세하겠습니다.
               </SmallText1>
@@ -57,6 +145,13 @@ const LeftContent = styled.div`
   @media (max-width: 768px) {
     margin-left: -40px;
   }
+`;
+
+const MsgP = styled.p`
+  font-size: 12px;
+  font-weight: 900;
+  color: red;
+  white-space: nowrap;
 `;
 
 const SmallText = styled.p`
