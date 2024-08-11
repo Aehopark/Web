@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Aehopark from '../assets/AehoparkLogo.png';
 
 function Nav({ onMoveToFocus }) {
   const scrollToTop = () => {
@@ -9,7 +10,9 @@ function Nav({ onMoveToFocus }) {
   };
   return (
     <Navbar>
-      <Logo onClick={scrollToTop}>Aehopark</Logo>
+     <Logo onClick={scrollToTop}>
+       <StyledImage src={Aehopark} alt="Aehopark" className="logo" />
+     </Logo>
       <NavItems>
         <NavItem onClick={onMoveToFocus}>어플정보</NavItem>
         <NavItem onClick={onMoveToFocus}>예약하기</NavItem>
@@ -64,4 +67,13 @@ const NavItem = styled.a`
   &:hover {
     color: ${({ theme }) => theme.colors.pc1};
   }
+`;
+
+const StyledImage = styled.img`
+  width: 200px;
+  height: 80px;
+  padding-left: 1px;
+  margin-top : -20px;
+  padding-bottom: 10px;
+  padding-bottom: 100px;
 `;
