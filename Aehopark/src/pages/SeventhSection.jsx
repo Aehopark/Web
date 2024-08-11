@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import cart from '../assets/cart.png';
+import shoppingBag from '../assets/shoppingBag.png'
 import particle from '../assets/particle.png';
 import { ScrollAnimation } from '@lasbe/react-scroll-animation';
 import swal from 'sweetalert';
@@ -92,7 +93,7 @@ function SeventhSection() {
           <SmallText>애호박은 UMC 학생들끼리 개발중인 앱 서비스입니다.</SmallText>
           <LargeText>애호박과 함께 알찬 장바구니를 챙겨봐요!</LargeText>
           <ImageAndFormContainer>
-            <StyledImage src={cart} alt="cart" className="bottom" />
+            <StyledImage src={shoppingBag} alt="cart" className="shoppingBag" />
             <RegistrationForm onSubmit={submitHandler}>
               <Label>이름</Label>
               <InputField type="text" value={uname} onChange={onChangeName} placeholder="이름을 작성해주세요" />
@@ -113,7 +114,6 @@ function SeventhSection() {
               <CTAButton>예약</CTAButton>
             </RegistrationForm>
           </ImageAndFormContainer>
-          <StyledImage src={particle} alt="particle" className="top" />
         </LeftContent>
       </SectionContainer>
     </ScrollAnimation>
@@ -235,7 +235,7 @@ const InputField = styled.input`
   width: 580px;
   background: #dbdbdb;
   @media (max-width: 768px) {
-    width: 85%;
+    width: 100%;
   }
 `;
 
@@ -256,7 +256,7 @@ const CTAButton = styled.button`
   height: 45px;
   @media (max-width: 768px) {
     padding-left: 0px;
-    width: 90%;
+    width: 105%;
   }
   &:hover {
     background-color: #45a049;
@@ -271,24 +271,18 @@ const StyledImage = styled.img`
   height: 300px;
   border-radius: 20px;
   padding-top: 10%;
-  &.top {
-    position: absolute;
-    top: 40px;
-    z-index: 1;
-  }
-
-  &.bottom {
-    /*position: absolute;*/
-    bottom: -100px;
-    z-index: 1;
+  transform: scale(1.5);
+  &.shoppingBag {
+    position: relative;
+    top: -180px;
   }
 
   @media (max-width: 768px) {
     margin-left: 130px;
-    &.bottom {
+    &.shoppingBag {
       position: relative;
       left: -150px;
-      top: 35px;
+      top: -70px;
     }
   }
 `;
