@@ -156,7 +156,7 @@ const FeaturesGrid = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 0%;
     padding-left: 0px;
   }
 `;
@@ -212,7 +212,7 @@ const CTAButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    margin-left: 6.5%;
+    margin-left: 0%;
   }
 `;
 

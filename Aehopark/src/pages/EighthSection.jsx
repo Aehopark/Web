@@ -63,6 +63,6 @@ const StyledImage = styled.img`
   margin-bottom: 300px;
 
   @media (max-width: 768px) {
-    margin-left: 10%;
+    margin-left: -20px;
   }
 `;

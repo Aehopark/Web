@@ -228,7 +228,7 @@ const StyledImg = styled.img`
   @media (max-width: 768px) {
     &.left {
       transform: scale(1.5);
-      right: -70px;
+      right: -40px;
       bottom: 100px;
     }
 
