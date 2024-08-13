@@ -57,10 +57,12 @@ const SmallText = styled.p`
 `;
 
 const StyledImage = styled.img`
-  width: 280px;
-  height: 200px;
-  margin-left: 200px;
+  width: 450px;
+  height: auto;
+  margin-left: 130px;
   margin-bottom: 300px;
+
+  object-fit: contain; 
 
   @media (max-width: 768px) {
     margin-left: -20px;
